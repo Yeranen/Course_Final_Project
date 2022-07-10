@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<Environment>
+
+    <!--Users-->
+
+    <UserName1>yrnp777@gmail.com</UserName1>
+    <PassWord1>SefariaTests</PassWord1>
+
+
+    <!--Links-->
+
+    <SourcesLink>https://www.sefaria.org.il/texts</SourcesLink>
+    <TopicsLink>https://www.sefaria.org.il/topics</TopicsLink>
+    <CommunityLink>https://www.sefaria.org.il/community</CommunityLink>
+    <DonateLinkContent>https://sefaria.nationbuilder.com/supportsefaria_il_w?_ga=2.</DonateLinkContent>
+
+
+
+
+
+</Environment>

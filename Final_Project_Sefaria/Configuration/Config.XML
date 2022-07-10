@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<Environment>
+    <!-- Timeout -->
+    <Timeout>5</Timeout>
+
+    <!-- Web -->
+    <Platform>web</Platform>
+    <BrowserName>chrome</BrowserName>
+    <url>https://www.sefaria.org.il/texts</url>
+
+    <!-- Sikuli Repo -->
+    <SikuliImageRepo>C:\Users\yrnp7\Desktop\MidProject_Sefaria\ImagesRepository\</SikuliImageRepo>
+
+    <!-- Data Providers -->
+    <DDTtitles>.\DDTFiles\Titles</DDTtitles>
+    <DDTreaderNavCategories>.\DDTFiles\readerNavCategories.csv</DDTreaderNavCategories>
+
+</Environment>

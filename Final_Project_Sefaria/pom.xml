@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>MidProject-Sefaria</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <!-- aspectJ -->
+        <aspectj.version>1.9.2</aspectj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    </properties>
+
+
+    <repositories>
+        <repository> <!--Yoni's Sikuli Repository-->
+            <id>sikulix-atid-college</id>
+            <name>Sikulix Repo ATID</name>
+            <url>https://atidcollege.co.il/downloads/libs</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+    <!--            Basics                         -->
+
+    <!-- Selenium Java 3.141.59 -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.141.59</version>
+    </dependency>
+
+    <!-- TestNG 7.0.0 -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.0.0</version>
+    </dependency>
+
+    <!-- slf4j Error Solution -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>1.7.36</version>
+    </dependency>
+
+    <!--Selenium webdrivermanager 5.0.3 -->
+    <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>5.0.3</version>
+    </dependency>
+
+    <!--Selenium ChromeDriver 3.141.59 -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-chrome-driver</artifactId>
+        <version>3.141.59</version>
+    </dependency>
+
+    <!-- allure 2.17.2 (Add aspectj) -->
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-testng</artifactId>
+        <version>2.17.2</version>
+        <!-- Demands Enviorment Varaible -->
+        <!--to See Results, Write in Terminal 'allure serve DirectoryName' Default is: allure serve allure-results -->
+    </dependency>
+
+    <!-- aspectj 1.9.2 (Add Properties) -->
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>1.9.2</version>
+        <!-- Let us Use @description -->
+    </dependency>
+
+    <!-- apache POI 5.2.2 -->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.2.2</version>
+        <!-- Let Us Work With Office Files -->
+    </dependency>
+
+    <!-- Yoni's Sikuli 2.0.4 -->
+    <dependency>
+        <groupId>sikulix</groupId>
+        <artifactId>sikulix-api</artifactId>
+        <version>2.0.4</version>
+        <!-- Need To Add Yoni's Repo-->
+    </dependency>
+
+    <!-- monte-screen-recorder 0.7.7.0 -->
+    <dependency>
+        <groupId>com.github.stephenc.monte</groupId>
+        <artifactId>monte-screen-recorder</artifactId>
+        <version>0.7.7.0</version>
+        <!-- Create new class  with the name Utilities.MonteScreenRecorder and put there 3 Methods -->
+    </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
